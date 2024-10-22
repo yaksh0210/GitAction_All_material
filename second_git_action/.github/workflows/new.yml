@@ -1,0 +1,16 @@
+name: New Project
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Getting Code
+        uses: actions/checkout@v3
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+           node-version: 18
+      - name: Install Dependancies
+        run: npm ci
+      - name: Run Test
+        run: npm test

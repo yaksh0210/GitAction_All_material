@@ -1,0 +1,8 @@
+name: demo workflow
+on: workflow_dispatch
+jobs:
+  job-one:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check the system
+      run: echo "System check"
